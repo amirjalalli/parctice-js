@@ -125,7 +125,6 @@
 //     break;
 // }
 
-
 // for (let i = 0; i <= 4; i++) {
 //     console.log("amir")
 // }
@@ -133,7 +132,7 @@
 //     console.log("min")
 // }
 
-// let index = 1 
+// let index = 1
 // while (index <= 4) {
 //     console.log("while")
 //     index++;
@@ -147,7 +146,7 @@
 
 // let person  = {
 //     name : "Amir",
-//     age: 40,
+//     age: 40, 
 //     isMarried: false,
 //     homeAddress: {
 //         long: 41,
@@ -155,7 +154,6 @@
 //     },
 //     frieds: ["arman", "mmd", "mehdi"],
 // }
-
 
 // for (let key in person) {
 //     console.log(key, person[key])
@@ -173,11 +171,10 @@
 
 // for (let i = 0 ; i < 20; i++){
 
-    
 //     if (i === 8) {
 //         continue;
 //     }
-    
+
 //     if (i >= 17) {
 //         break
 //     }
@@ -192,7 +189,6 @@
 // console.log(message.toLocaleLowerCase().indexOf("name"))
 // console.log(message.lastIndexOf('Hi'))
 
-
 // let temp = [1,2,3,4]
 // console.log(temp.toString())
 
@@ -200,14 +196,207 @@
 // let m2 = "my name is"
 // let m3 = "Amir"
 
-
-let m = 'Hi my name is Amir'
+// let m = 'Hi my name is Amir'
 // console.log(m.split(" "))
 // console.log(m.slice(0, m.length[m.length -1]))\
 // console.log(Array(m ))
 
-
-// what diffrent betwenn substr and substring and slice 
+// what diffrent betwenn substr and substring and slice
 // the substr second parmeter is length but the substring and slice are index
 
-console.log(m.substr(0, m.length))
+// console.log(m.substr(0, m.length))
+
+// let user = {
+//     name: "amir",
+//     age: "28",
+
+// }
+
+// user.email = "amirjalali@gmail.com"
+// delete user.age
+
+// console.log(user)
+
+// let user = {
+//     name: "amir",
+//     age: "28",
+//     email: 'amir@gamil.com',
+//     phone: '123123',
+// }
+
+// for(let key in user) {
+//     console.log(key, user[key])
+// }
+// for (let val of Array(user)) {
+//     console.log(val, Array(user))
+// }
+// console.log(Object.values(user), Object.keys(user))
+
+// let sumOfPayment = {
+//     amir: '1000',
+//     mehdi: '1500',
+//     farzin: '4000',
+//     afshin: '1500',
+//     mmdreza: '3000',
+// }
+
+// let sum = 0
+// for (let key in sumOfPayment) {
+//     // sum += Number(user[key])
+//     sum = sum + Number(sumOfPayment[key])
+// }
+// let sum1 = 0
+// for (let val of Object.values(sumOfPayment)) {
+//     sum1 += Number(val)
+//     // sum1 = sum1 + Number(val)
+// }
+// console.log(sum, sum1)
+
+// const user = {
+//     name : 'amir',
+//     age: 28,
+//     favBook: {
+//         bookName: "volume Profile",
+//         bookAuthor: "xxx",
+//     }
+// }
+
+// const {name, age, favBook} = user
+// console.log(name, age, favBook.bookName, favBook.bookAuthor)
+
+// const user = {
+//     name : 'amir',
+//     age: 28,
+// }
+
+// const copidUser = {}
+
+// for (let key in user) {
+//     // console.log( user[key])
+//     console.log(copidUser[key] = user[key])
+// }
+// const copidUser = Object.assign({email: "amir@gmail.com"}, user)
+// const copidUser  = {...user, email: "amir@gmail.com"}
+// console.log(copidUser)
+
+// function calcSum (num1, num2 = 10, num3= 5) {
+//     return console.log(num1 + num2 + num3)
+// }
+// calcSum(5, 5, 2)
+
+//rest parameters
+// function calcSum (...args) {
+//     let multi = 1
+//     for (let num of args) {
+//         multi *= num
+//     }
+//     return console.log(multi)
+// }
+
+// // calcSum(2,3,4,5)
+// const number = [1, 2, 3, 2, 4, 2, 5];
+// // number.unshift(9,10,11)
+// // number.push(17,18,19)
+// // number.shift(9)
+// // number.pop(19)
+// // number.splice(2, number.length, 14, 15);
+// // console.log(number);
+// console.log(number.includes(2, 4))
+ 
+// const dr = [
+//     {name: 'amir', age: 20},
+//     {name: 'ali', age: 15},
+//     {name: 'g', age: 35},
+//     {name: 'sss', age: 23},
+//     {name: 'ddd', age: 41},
+//     {name: 'rrr', age: 31},
+// ]
+// const result = dr.map((item,index) => {
+//     return item.age > 25 
+// }) ? true : false
+// console.log(result)
+// dr.sort((a,b) => {
+//     if(a.age > b.age) return +1
+//     if(a.age < b.age) return -1
+//     if(a.age === b.age) return 0
+// }).reverse()
+
+// console.log(result)
+// two method call some and every
+// have one diffrent bettwen them that is if one of them have diffrent of condition the result be false
+
+// let num = [1,2,3,4,5,6]
+// console.log(num.slice(2, 4))
+
+// let num1 = [1,2,3]
+// let num2 = [4,5,6]
+// let result = [...num1]
+
+// console.log(num1.some((n) => {
+//     return n >= 3
+// }))
+
+// let set = new Set()
+// set.add(100)
+// set.add(200)
+// set.add(100)
+// set.delete(200)
+
+// console.log(set.size)
+// let map = new Map()
+// map.set("Mango", "ame")
+// map.set("banana", "kola")
+// map.set("Score", 100)
+// console.log(map)
+
+
+// set , map , weakset
+
+// therer only get object
+// const ws = new WeakSet()
+// const object1 = {}
+// const object2 = {}
+// ws.add(object1)
+// ws.add(object2)
+// console.log(ws)
+// console.log(ws.has(object1))
+// const wm = new WeakMap()
+// wm.set(object1)
+// console.log(wm.has(object1))
+// console.log(wm.get(object1))
+
+// function div(a, b) {
+//     if(b === 0) {
+//         throw SyntaxError("Error")
+//     }
+// }
+// console.log(
+
+//     div(1,0)
+// )
+
+// let regExp = /amir/i
+// console.log(regExp.test("hello amir"))
+
+
+//factory funciton 
+
+// function user (name, age) {
+//     const userObje = {
+//         name,
+//         age,
+//         walk: function() {
+//             console.log("hello amir")
+//         }
+//     }
+//     return userObje
+// }
+
+// const user1 = user("farzin", 30)
+// const user2 = user("amir", 28)
+
+// console.log(user1,user2)
+
+//  
+
+
