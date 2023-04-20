@@ -146,7 +146,7 @@
 
 // let person  = {
 //     name : "Amir",
-//     age: 40, 
+//     age: 40,
 //     isMarried: false,
 //     homeAddress: {
 //         long: 41,
@@ -302,7 +302,7 @@
 // // number.splice(2, number.length, 14, 15);
 // // console.log(number);
 // console.log(number.includes(2, 4))
- 
+
 // const dr = [
 //     {name: 'amir', age: 20},
 //     {name: 'ali', age: 15},
@@ -312,7 +312,7 @@
 //     {name: 'rrr', age: 31},
 // ]
 // const result = dr.map((item,index) => {
-//     return item.age > 25 
+//     return item.age > 25
 // }) ? true : false
 // console.log(result)
 // dr.sort((a,b) => {
@@ -349,7 +349,6 @@
 // map.set("Score", 100)
 // console.log(map)
 
-
 // set , map , weakset
 
 // therer only get object
@@ -378,8 +377,7 @@
 // let regExp = /amir/i
 // console.log(regExp.test("hello amir"))
 
-
-//factory funciton 
+//factory funciton
 
 // function user (name, age) {
 //     const userObje = {
@@ -397,6 +395,167 @@
 
 // console.log(user1,user2)
 
-//  
+//
+
+// console.log("before")
+
+// function fetchUser () {
+//     setTimeout(() => {
+//         console.log("in function")
+//         return {
+//             name: "amir",
+//             age: 40
+//         }
+//     }, 2000)
+// }
+
+// const user = fetchUser()
+// console.log(user)
+
+// console.log("After")
+/////////////////////////////////////////////
+// fetchUser(1234,"amirjalali@gmail.com",(user)  =>{
+//     console.log(user)
+//     sendEmail(fetchUser.email,(response) => {
+//         console.log(response)
+//     })
+// })
+
+// function sendEmail (userEmail, callback) {
+//     setTimeout(() => {
+//         console.log("in function sendEmail")
+//         const response = {response : true}
+//         callback(response)
+//     }, 3000)
+// }
+
+// function fetchUser (id,email,callback) {
+//     setTimeout(() => {
+//         console.log("in function fetchUser")
+//         const fetchedUser = {
+//             id: id,
+//             name: "amir",
+//             age: 28,
+//             email: email
+//         }
+//         callback(fetchedUser)
+//     },2000)
+// }
+
+// Promise
+
+// const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve(1)
+//         reject(new Error("this is error"))
+//     },2000)
+// })
+
+// promise.then(( result) => {
+//     console.log(result)
+// }).catch((err) => {
+//     console.log(err.message)
+// })
+
+// const gitAPI = fetch("https://api.github.com/users/andrew")
+
+// gitAPI.then((res) => {
+//     return res.json().then((profile) => {
+//         return console.log(profile)
+//     })
+// }).catch(err => console.log(err))
+
+// async function getApi () {
+//     const res = await fetch("https://api.github.com/users/andrew")
+
+//     const profile = await res.json()
+//     console.log(profile)
+// }
+
+// getApi()
+
+// const resolveAfter2Second = (x)  =>{
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(x)
+//         }, 2000)
+//     })
+// }
+
+// async function f1 () {
+//     const x  = await resolveAfter2Second(10)
+//     console.log(x)
+// }
+
+// f1()
+// function resolveAfter2Seconds(x) {
+//     return new Promise((resolve) => {
+//       setTimeout(() => {
+//         resolve(x);
+//       }, 2000);
+//     });
+//   }
+
+//   async function f1() {
+//     const x = await resolveAfter2Seconds(10);
+//     console.log(x); // 10
+//   }
+
+//   f1();
+
+// let headers = document.getElementsByTagName("h2")
+// headers = Array.from(headers)
+
+// headers.forEach(header => {
+//     console.log(header)
+//     header.style.color = "#fff"
+//     header.style.backgroundColor = "#333"
+//     header.style.marginTop = "15px"
+//     header.style.marginBottom = "15px"
+//     header.style.padding = "10px 15px"
+// })
+
+// console.log(headers)
+
+// let lists = document.querySelector('ol')
+
+// console.log(lists.children)
+// console.log(lists.childElementCount)
+// console.log(lists.children[1])
+// lists.children[2].innerHTML = "<span>hi amir</span>"
+// console.log(lists)
+// console.log(lists)
+{/* <li class="content-li">
+  <p>post1</p>
+  <button>x</button>
+</li>; */}
+
+// let orderList = document.querySelector(".conten-ol")
+// let list1 = document.createElement('li')
+// let paragraph = document.createElement("p")
+// let button = document.createElement("button")
+
+// list1.className = "content-li"
+// paragraph.innerText = "create new element"
+// button.innerText = "x"
+// list1.append(paragraph, button)
+// orderList.append(list1)
+// console.log( orderList)
+
+
+// const btn = document.querySelector(".btn")
+
+// btn.addEventListener('click', (event) => {
+//     console.log(event.target)
+//     console.log(event.clientX)
+//     console.log(event.clientY)
+//     console.log(event.offsetX)
+//     console.log(event.offsetY)
+//     console.log(event.shiftKey)
+//     console.log(event.altKey)
+//     console.log(event.ctrlKey)  
+// })
+
+
 
 
